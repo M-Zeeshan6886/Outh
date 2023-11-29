@@ -1,0 +1,113 @@
+@import "../../../Sass/mixin";
+@import "../../../Sass/variables";
+
+.signup_container {
+  display: flex;
+  &_left {
+    width: 50%;
+    height: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0rem;
+    //     background-color: lightblue;
+    &_content {
+      width: 65%;
+      padding: 0.5rem 0rem;
+      display: flex;
+      flex-direction: column;
+      //  background-color: grey;
+      h1 {
+        color: $black;
+        font-family: Poppins;
+        font-size: 3.2rem;
+        font-weight: 500;
+      }
+      &_innerContent {
+        margin-top: 6.2rem;
+        &_checkField {
+          display: flex;
+          align-items: center;
+          // background-color: red;
+          & > *:not(:first-child) {
+            margin-left: 1rem;
+          }
+          p {
+            color: $black;
+            font-family: Poppins;
+            font-size: 0.9rem;
+            font-weight: 500;
+
+            span {
+              margin-left: 0.5rem;
+              color: $black;
+              font-family: Poppins;
+              font-size: 0.9rem;
+              font-weight: 500;
+              cursor: pointer;
+              text-decoration-line: underline;
+            }
+          }
+        }
+        &_btn {
+          width: 100%;
+          padding: 0.7rem 0rem;
+          margin-top: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 1rem;
+          border: 1px solid #3a5b22;
+          background: #3a5b22;
+          cursor: pointer;
+          h1 {
+            color: $white;
+            font-family: Poppins;
+            font-size: 1.3rem;
+            font-weight: 700;
+          }
+        }
+      }
+      &_orField {
+        display: flex;
+        justify-content: center;
+        margin-top: 5.9rem;
+      }
+      &_socialIcon {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      p {
+        color: $black;
+        font-family: Poppins;
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 2rem;
+        span {
+          margin-left: 0.5rem;
+          color: #0f3dde;
+          font-family: Poppins;
+          font-size: 1.4rem;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &_right {
+    width: 50%;
+    height: 80rem;
+    padding: 0.5rem 0rem;
+    background-image: url("../../../assets/signUpAssets/signupBanner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4.5rem, 0px, 0px, 4.5rem;
+    @include respond(tab-port) {
+     //  display: none;
+    }
+  }
+}
